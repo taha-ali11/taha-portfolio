@@ -58,7 +58,7 @@ export default function Navbar() {
           onClick={(e) => handleNavClick(e, "#home")}
           className="font-display text-lg sm:text-xl font-bold text-grape-dark shrink-0"
         >
-          Taha Ali
+          TA
         </a>
 
         <ul className="hidden md:flex items-center gap-1 lg:gap-2">

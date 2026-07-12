@@ -43,7 +43,7 @@ export default function About() {
                 <GraduationCap size={22} />
               </span>
               <p className="text-ink/80 leading-relaxed">
-                I&apos;m a BS Science graduate from{" "}
+                I&apos;m a BS Computer Science graduate from{" "}
                 <strong className="text-ink">
                   University of Central Punjab (UCP)
                 </strong>
