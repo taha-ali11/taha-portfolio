@@ -49,7 +49,7 @@ function SkillTile({ skill, index }) {
       className={isWide ? "col-span-2" : "col-span-1"}
     >
       <div
-        className={`clay-surface h-full rounded-[2rem] cursor-default transition-shadow duration-300 ${chipShadow[skill.color]} ${
+        className={`clay-surface h-full rounded-[2.25rem] cursor-default transition-shadow duration-300 ${chipShadow[skill.color]} ${
           isWide
             ? "flex items-center gap-3 px-5 py-4"
             : "flex flex-col items-center justify-center gap-2 px-3 py-5 text-center"

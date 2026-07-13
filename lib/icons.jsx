@@ -14,6 +14,8 @@ import {
   SiVite,
   SiMysql,
   SiMongodb,
+  SiSwagger,
+  SiN8N,
 } from "react-icons/si";
 import {
   Sparkles,
@@ -22,6 +24,7 @@ import {
   Cpu,
   BrainCircuit,
   Atom,
+  Wand2,
 } from "lucide-react";
 
 export const iconMap = {
@@ -44,6 +47,9 @@ export const iconMap = {
   cpu: Cpu,
   brain: BrainCircuit,
   atom: Atom,
+  swagger: SiSwagger,
+  n8n: SiN8N,
+  wand: Wand2,
 };
 
 export function SkillIcon({ name, className }) {

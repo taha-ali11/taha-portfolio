@@ -101,7 +101,7 @@ export default function About() {
                 {aboutSkillIcons.map((skill) => (
                   <li
                     key={skill.name}
-                    className="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-cloud shadow-clay-sm text-sm font-semibold text-ink/80"
+                    className="flex items-center gap-2 px-4 py-2.5 rounded-[1.75rem] bg-cloud shadow-clay-sm text-sm font-semibold text-ink/80"
                   >
                     <SkillIcon name={skill.icon} className="text-grape-dark" />
                     {skill.name}
@@ -117,17 +117,20 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="lg:col-span-2 clay-surface p-6 flex items-center justify-center"
+            className="lg:col-span-2 clay-surface p-4 sm:p-5 flex items-center justify-center"
           >
-            <div className="relative w-full aspect-[4/5] max-w-xs mx-auto">
-              <div className="absolute inset-0 rounded-blob bg-gradient-to-br from-grape/25 via-teal/20 to-sunny/25 shadow-clay-md" />
+            <div className="relative w-full aspect-[4/5] max-w-sm mx-auto">
+              {/* Gradient ring — the visible "frame" edge */}
+              <div className="absolute inset-0 rounded-blob bg-[linear-gradient(135deg,rgba(140,111,230,0.45),rgba(95,182,232,0.4)_35%,rgba(62,213,201,0.4)_65%,rgba(52,211,153,0.45))] shadow-clay-lg" />
               {/*
                 Replace the placeholder below with:
                 <Image src="/profile.jpg" alt="Portrait of Taha Ali" fill
                   className="object-cover rounded-blob" />
               */}
-              <div className="absolute inset-4 rounded-blob overflow-hidden clay-pressed grid place-items-center bg-clay-lilac">
-                <span className="text-ink/40 text-sm text-center px-6">
+              <div className="absolute inset-[14px] sm:inset-4 rounded-blob overflow-hidden clay-pressed grid place-items-center bg-clay-lilac">
+                {/* Glossy inner highlight for extra puffed-dome feel */}
+                <div className="absolute -top-6 -left-6 w-2/3 h-2/3 rounded-full bg-white/50 blur-2xl pointer-events-none" />
+                <span className="relative text-ink/40 text-sm text-center px-6">
                   Add your photo at{" "}
                   <code className="font-mono">/public/profile.jpg</code>
                 </span>
@@ -163,7 +166,7 @@ export default function About() {
           <a
             href="#connect"
             onClick={scrollTo("#connect")}
-            className="px-7 py-3.5 rounded-full bg-sunny text-ink font-bold shadow-[0_8px_0_0_#E0B02E,0_18px_30px_-10px_rgba(224,176,46,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#E0B02E,0_22px_34px_-10px_rgba(224,176,46,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#E0B02E,0_10px_18px_-8px_rgba(224,176,46,0.5)] transition-all duration-300"
+            className="px-7 py-3.5 rounded-full border-2 border-sunny-dark/70 bg-sunny text-ink font-bold shadow-[0_8px_0_0_#E0B02E,0_18px_30px_-10px_rgba(224,176,46,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#E0B02E,0_22px_34px_-10px_rgba(224,176,46,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#E0B02E,0_10px_18px_-8px_rgba(224,176,46,0.5)] transition-all duration-300"
           >
             Start a Project With Me
           </a>

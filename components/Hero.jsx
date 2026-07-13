@@ -84,14 +84,14 @@ export default function Hero() {
           <a
             href="#connect"
             onClick={scrollTo("#connect")}
-            className="px-7 py-3.5 rounded-full bg-grape text-white font-semibold shadow-[0_8px_0_0_#6C4FD6,0_18px_30px_-10px_rgba(108,79,214,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#6C4FD6,0_22px_34px_-10px_rgba(108,79,214,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#6C4FD6,0_10px_18px_-8px_rgba(108,79,214,0.5)] transition-all duration-300"
+            className="px-7 py-3.5 rounded-full border-2 border-grape-dark/70 bg-grape text-white font-semibold shadow-[0_8px_0_0_#6C4FD6,0_18px_30px_-10px_rgba(108,79,214,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#6C4FD6,0_22px_34px_-10px_rgba(108,79,214,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#6C4FD6,0_10px_18px_-8px_rgba(108,79,214,0.5)] transition-all duration-300"
           >
             Let&apos;s Talk
           </a>
           <a
             href="#skills"
             onClick={scrollTo("#skills")}
-            className="px-7 py-3.5 rounded-full bg-clayGreen text-white font-semibold shadow-[0_8px_0_0_#1FAE7E,0_18px_30px_-10px_rgba(31,174,126,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#1FAE7E,0_22px_34px_-10px_rgba(31,174,126,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#1FAE7E,0_10px_18px_-8px_rgba(31,174,126,0.5)] transition-all duration-300"
+            className="px-7 py-3.5 rounded-full border-2 border-clayGreen-dark/70 bg-clayGreen text-white font-semibold shadow-[0_8px_0_0_#1FAE7E,0_18px_30px_-10px_rgba(31,174,126,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#1FAE7E,0_22px_34px_-10px_rgba(31,174,126,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#1FAE7E,0_10px_18px_-8px_rgba(31,174,126,0.5)] transition-all duration-300"
           >
             See My Skills
           </a>

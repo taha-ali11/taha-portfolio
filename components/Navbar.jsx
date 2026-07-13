@@ -48,7 +48,7 @@ export default function Navbar() {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`w-full max-w-5xl flex items-center justify-between gap-4 px-4 sm:px-6 py-3 rounded-clay bg-[#EFEAFA]/90 backdrop-blur-md transition-shadow duration-300 ${
+        className={`w-full max-w-5xl flex items-center justify-between gap-4 px-4 sm:px-6 py-3 rounded-full bg-[#EFEAFA]/90 backdrop-blur-md transition-shadow duration-300 ${
           scrolled ? "shadow-clay-md" : "shadow-clay-lg"
         }`}
         aria-label="Primary"

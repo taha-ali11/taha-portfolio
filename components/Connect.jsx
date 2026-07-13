@@ -143,7 +143,7 @@ export default function Connect() {
             href={agencySocials.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 sm:mt-0 shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-sky text-white font-semibold shadow-[0_8px_0_0_#3D93C6,0_18px_30px_-10px_rgba(61,147,198,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#3D93C6,0_22px_34px_-10px_rgba(61,147,198,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#3D93C6,0_10px_18px_-8px_rgba(61,147,198,0.5)] transition-all duration-300"
+            className="mt-6 sm:mt-0 shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-full border-2 border-sky-dark/70 bg-sky text-white font-semibold shadow-[0_8px_0_0_#3D93C6,0_18px_30px_-10px_rgba(61,147,198,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#3D93C6,0_22px_34px_-10px_rgba(61,147,198,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#3D93C6,0_10px_18px_-8px_rgba(61,147,198,0.5)] transition-all duration-300"
           >
             Visit AlphaGeeks
             <ArrowUpRight size={18} />
