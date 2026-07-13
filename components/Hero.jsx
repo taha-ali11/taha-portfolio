@@ -52,7 +52,7 @@ export default function Hero() {
         >
           Hey, I&apos;m Taha Ali —
           <br />
-          <span className="text-gradient">building interfaces that feel alive.</span>
+          <span className="text-gradient">Design that moves before the user clicks.</span>
         </motion.h1>
 
         <motion.div
@@ -70,9 +70,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="max-w-xl text-base sm:text-lg text-ink/70"
         >
-          I&apos;m a freelance developer and entrepreneur — I design and build
-          full-stack products with Next.js, then wire in the animation and AI
-          automation that make them feel considered, not templated.
+          I&apos;m a freelance developer and entrepreneur — I build full-stack Next.js products, then wire in animation and AI automation that make them feel crafted, not assembled. Every detail intentional. Nothing left to chance.
         </motion.p>
 
         <motion.div
@@ -86,7 +84,7 @@ export default function Hero() {
             onClick={scrollTo("#connect")}
             className="px-7 py-3.5 rounded-full border-2 border-grape-dark/70 bg-grape text-white font-semibold shadow-[0_8px_0_0_#6C4FD6,0_18px_30px_-10px_rgba(108,79,214,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#6C4FD6,0_22px_34px_-10px_rgba(108,79,214,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#6C4FD6,0_10px_18px_-8px_rgba(108,79,214,0.5)] transition-all duration-300"
           >
-            Let&apos;s Talk
+            Let&apos;s Ship
           </a>
           <a
             href="#skills"

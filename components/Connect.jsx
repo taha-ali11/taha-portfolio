@@ -67,13 +67,11 @@ export default function Connect() {
             Connect
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold mt-2 text-ink">
-            Got a project worth building well?
+            Your next project deserves more than a template. Ready?
           </h2>
           <p className="max-w-xl mx-auto text-ink/70 mt-4 leading-relaxed">
-            If it involves a screen, a database, or an automation that keeps
-            you up at night — I want to hear about it. Pick whichever
-            channel below feels easiest and tell me what you&apos;re
-            trying to build.
+            If it involves a screen, a database, or an automation that's been stealing your weekends
+            — I want to hear about it. Pick the channel that feels easiest and tell me what you're building.
           </p>
         </motion.div>
 
@@ -111,7 +109,7 @@ export default function Connect() {
         >
           <div>
             <h3 className="font-display font-bold text-xl text-grape-dark">
-              Need more than a website?
+             Need more than a website? Good. So do we.
             </h3>
             <p className="text-ink/70 mt-2 max-w-md leading-relaxed">
               For SEO, ads, branding, or full digital marketing beyond web

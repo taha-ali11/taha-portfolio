@@ -25,7 +25,7 @@ export default function About() {
             About Me
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold mt-2 text-ink">
-            The person behind the code
+            The Brain in the Stack
           </h2>
         </motion.div>
 
@@ -47,9 +47,7 @@ export default function About() {
                 <strong className="text-ink">
                   University of Central Punjab (UCP)
                 </strong>
-                , working out of Lahore as a freelance developer and
-                entrepreneur. I run my own agency, AlphaGeeks, alongside
-                independent client work.
+                ,and work out of Lahore as a freelance developer and entrepreneur. I founded AlphaGeeks — my agency — where I combine the precision of a solo developer with the firepower of a full-service team.
               </p>
             </div>
 
@@ -58,11 +56,9 @@ export default function About() {
                 My vision
               </h3>
               <p className="text-ink/70 leading-relaxed">
-                Most portfolios and product sites look interchangeable —
-                same layout, same motion, same fonts. I build the opposite:
-                interfaces with a distinct visual identity, animated with
-                intent rather than decoration, and backed by clean,
-                maintainable code underneath.
+                Most of the web looks like it was built from the same starter kit — same layout, same motion, same fonts. 
+                I build the opposite: interfaces with a distinct visual identity, animation that earns its place, and code
+                 that's clean enough to hand off without an apology.
               </p>
             </div>
 
@@ -71,10 +67,8 @@ export default function About() {
                 Where I focus
               </h3>
               <p className="text-ink/70 leading-relaxed">
-                Full-stack web development with Next.js and React, motion
-                design with Framer Motion and Anime.js, and — increasingly —
-                wiring AI automation and AI agents into real client
-                workflows, not just chat widgets bolted onto a homepage.
+               Full-stack Next.js and React. Motion that means something.
+                APIs wired securely. And AI automation that works inside your workflow — not as a chatbot decoration on your homepage.
               </p>
             </div>
 
@@ -86,10 +80,8 @@ export default function About() {
                 </h3>
               </div>
               <p className="text-ink/70 leading-relaxed">
-                I've also picked up the basics of cybersecurity — enough to
-                build with input validation, sanitized data handling, and
-                secure authentication patterns from day one, so client sites
-                don't just look good, they hold up under real-world use.
+                I build with security wired in, not bolted on. Input validation. 
+                Sanitized data. Secure auth. From day one — so your site holds up when it actually matters.
               </p>
             </div>
 
@@ -130,10 +122,6 @@ export default function About() {
               <div className="absolute inset-[14px] sm:inset-4 rounded-blob overflow-hidden clay-pressed grid place-items-center bg-clay-lilac">
                 {/* Glossy inner highlight for extra puffed-dome feel */}
                 <div className="absolute -top-6 -left-6 w-2/3 h-2/3 rounded-full bg-white/50 blur-2xl pointer-events-none" />
-                <span className="relative text-ink/40 text-sm text-center px-6">
-                  Add your photo at{" "}
-                  <code className="font-mono">/public/profile.jpg</code>
-                </span>
               </div>
             </div>
           </motion.div>
@@ -168,7 +156,7 @@ export default function About() {
             onClick={scrollTo("#connect")}
             className="px-7 py-3.5 rounded-full border-2 border-sunny-dark/70 bg-sunny text-ink font-bold shadow-[0_8px_0_0_#E0B02E,0_18px_30px_-10px_rgba(224,176,46,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#E0B02E,0_22px_34px_-10px_rgba(224,176,46,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#E0B02E,0_10px_18px_-8px_rgba(224,176,46,0.5)] transition-all duration-300"
           >
-            Start a Project With Me
+            Got a Vision? I've Got the Stack
           </a>
         </div>
       </div>
