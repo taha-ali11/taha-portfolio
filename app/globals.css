@@ -17,7 +17,8 @@ body {
   background-image:
     radial-gradient(circle at 8% 15%, rgba(143, 111, 230, 0.10) 0%, transparent 40%),
     radial-gradient(circle at 92% 30%, rgba(62, 213, 201, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 20% 85%, rgba(255, 201, 77, 0.12) 0%, transparent 40%);
+    radial-gradient(circle at 20% 85%, rgba(252, 211, 77, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 78% 92%, rgba(52, 211, 153, 0.10) 0%, transparent 40%);
   color: #3A3450;
   font-family: var(--font-jakarta);
 }
@@ -43,12 +44,12 @@ button:focus-visible,
 /* Reusable claymorphic surface */
 .clay-surface {
   background: #EFEAFA;
-  border-radius: 2rem;
-  box-shadow: 16px 16px 32px #d6cdef, -16px -16px 32px #ffffff;
+  border-radius: 2.25rem;
+  box-shadow: 22px 22px 48px #cdc2ec, -22px -22px 48px #ffffff;
 }
 
 .clay-pressed {
-  box-shadow: inset 6px 6px 12px #d6cdef, inset -6px -6px 12px #ffffff;
+  box-shadow: inset 8px 8px 16px #cdc2ec, inset -8px -8px 16px #ffffff;
 }
 
 .text-gradient {

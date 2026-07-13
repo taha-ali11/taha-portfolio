@@ -28,15 +28,29 @@ export default {
           dark: "#26A99E",
           light: "#BFF3EE",
         },
+        // "Clay yellow" — from the fresh/gamified reference palette
         sunny: {
-          DEFAULT: "#FFC94D",
-          dark: "#E5A824",
-          light: "#FFEBB0",
+          DEFAULT: "#FCD34D",
+          dark: "#E0B02E",
+          light: "#FFF3C4",
         },
         sky: {
           DEFAULT: "#5FB6E8",
           dark: "#3D93C6",
           light: "#C9E9FA",
+        },
+        // "Clay green" + mint + deep emerald — from the fresh/gamified reference palette
+        clayGreen: {
+          DEFAULT: "#34D399",
+          dark: "#1FAE7E",
+          light: "#B9F5DE",
+        },
+        mint: {
+          DEFAULT: "#ECFDF5",
+          deep: "#D1FAE5",
+        },
+        emerald: {
+          DEFAULT: "#064E3B",
         },
       },
       fontFamily: {
@@ -44,19 +58,21 @@ export default {
         body: ["var(--font-jakarta)", "sans-serif"],
       },
       boxShadow: {
-        "clay-lg": "16px 16px 32px #d6cdef, -16px -16px 32px #ffffff",
-        "clay-md": "10px 10px 20px #d6cdef, -10px -10px 20px #ffffff",
-        "clay-sm": "6px 6px 12px #d6cdef, -6px -6px 12px #ffffff",
-        "clay-inset": "inset 6px 6px 12px #d6cdef, inset -6px -6px 12px #ffffff",
-        "clay-coral": "10px 10px 22px #e3a186, -10px -10px 22px #ffe4d8",
-        "clay-teal": "10px 10px 22px #299d92, -10px -10px 22px #d9fbf6",
-        "clay-sunny": "10px 10px 22px #d1a338, -10px -10px 22px #fff6dc",
-        "clay-sky": "10px 10px 22px #4b93c1, -10px -10px 22px #e3f4fd",
-        "clay-grape": "10px 10px 22px #6f56bd, -10px -10px 22px #e6ddfb",
+        "clay-lg": "22px 22px 48px #cdc2ec, -22px -22px 48px #ffffff",
+        "clay-md": "14px 14px 30px #cdc2ec, -14px -14px 30px #ffffff",
+        "clay-sm": "8px 8px 16px #cdc2ec, -8px -8px 16px #ffffff",
+        "clay-inset": "inset 8px 8px 16px #cdc2ec, inset -8px -8px 16px #ffffff",
+        "clay-coral": "12px 12px 26px #e3a186, -12px -12px 26px #ffe4d8",
+        "clay-teal": "12px 12px 26px #299d92, -12px -12px 26px #d9fbf6",
+        "clay-sunny": "12px 12px 26px #dcb43a, -12px -12px 26px #fff3c4",
+        "clay-sky": "12px 12px 26px #4b93c1, -12px -12px 26px #e3f4fd",
+        "clay-grape": "12px 12px 26px #6f56bd, -12px -12px 26px #e6ddfb",
+        "clay-green": "12px 12px 26px #1c9974, -12px -12px 26px #d7fbee",
+        "clay-mint": "12px 12px 26px #bfeed6, -12px -12px 26px #ffffff",
       },
       borderRadius: {
         blob: "42% 58% 65% 35% / 45% 40% 60% 55%",
-        clay: "2rem",
+        clay: "2.25rem",
       },
       keyframes: {
         float: {

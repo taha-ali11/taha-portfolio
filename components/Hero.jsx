@@ -29,13 +29,17 @@ export default function Hero() {
         className="w-40 h-40 top-1/3 right-1/4 hidden lg:block"
         colorClass="bg-sunny/30"
       />
+      <ClayBlob
+        className="w-32 h-32 bottom-1/4 left-1/4 hidden lg:block"
+        colorClass="bg-clayGreen/25"
+      />
 
       <div className="relative max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
         <motion.span
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="clay-surface px-5 py-2 text-sm font-semibold text-grape-dark shadow-clay-sm"
+          className="rounded-clay bg-mint-deep px-5 py-2 text-sm font-semibold text-emerald shadow-clay-mint"
         >
           Based in Lahore, Pakistan
         </motion.span>
@@ -75,19 +79,19 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}
-          className="flex flex-wrap items-center justify-center gap-4 mt-2"
+          className="flex flex-wrap items-center justify-center gap-5 mt-2"
         >
           <a
             href="#connect"
             onClick={scrollTo("#connect")}
-            className="px-7 py-3.5 rounded-full bg-grape text-white font-semibold shadow-clay-grape hover:-translate-y-1 hover:shadow-clay-lg active:translate-y-0 transition-all duration-300"
+            className="px-7 py-3.5 rounded-full bg-grape text-white font-semibold shadow-[0_8px_0_0_#6C4FD6,0_18px_30px_-10px_rgba(108,79,214,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#6C4FD6,0_22px_34px_-10px_rgba(108,79,214,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#6C4FD6,0_10px_18px_-8px_rgba(108,79,214,0.5)] transition-all duration-300"
           >
             Let&apos;s Talk
           </a>
           <a
             href="#skills"
             onClick={scrollTo("#skills")}
-            className="px-7 py-3.5 rounded-full clay-surface font-semibold text-ink hover:-translate-y-1 hover:shadow-clay-lg active:translate-y-0 transition-all duration-300"
+            className="px-7 py-3.5 rounded-full bg-clayGreen text-white font-semibold shadow-[0_8px_0_0_#1FAE7E,0_18px_30px_-10px_rgba(31,174,126,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#1FAE7E,0_22px_34px_-10px_rgba(31,174,126,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#1FAE7E,0_10px_18px_-8px_rgba(31,174,126,0.5)] transition-all duration-300"
           >
             See My Skills
           </a>

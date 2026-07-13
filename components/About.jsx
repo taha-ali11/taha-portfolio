@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, ShieldCheck } from "lucide-react";
 import { SkillIcon } from "@/lib/icons";
 import { aboutSkillIcons, stats } from "@/lib/data";
 
@@ -43,7 +43,7 @@ export default function About() {
                 <GraduationCap size={22} />
               </span>
               <p className="text-ink/80 leading-relaxed">
-                I&apos;m a BS Computer Science graduate from{" "}
+                I&apos;m a BS Science graduate from{" "}
                 <strong className="text-ink">
                   University of Central Punjab (UCP)
                 </strong>
@@ -75,6 +75,21 @@ export default function About() {
                 design with Framer Motion and Anime.js, and — increasingly —
                 wiring AI automation and AI agents into real client
                 workflows, not just chat widgets bolted onto a homepage.
+              </p>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <ShieldCheck size={18} className="text-clayGreen-dark shrink-0" />
+                <h3 className="font-display font-bold text-lg text-grape-dark">
+                  Security-conscious by habit
+                </h3>
+              </div>
+              <p className="text-ink/70 leading-relaxed">
+                I've also picked up the basics of cybersecurity — enough to
+                build with input validation, sanitized data handling, and
+                secure authentication patterns from day one, so client sites
+                don't just look good, they hold up under real-world use.
               </p>
             </div>
 
@@ -148,7 +163,7 @@ export default function About() {
           <a
             href="#connect"
             onClick={scrollTo("#connect")}
-            className="px-7 py-3.5 rounded-full bg-teal text-white font-semibold shadow-clay-teal hover:-translate-y-1 hover:shadow-clay-lg transition-all duration-300"
+            className="px-7 py-3.5 rounded-full bg-sunny text-ink font-bold shadow-[0_8px_0_0_#E0B02E,0_18px_30px_-10px_rgba(224,176,46,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#E0B02E,0_22px_34px_-10px_rgba(224,176,46,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#E0B02E,0_10px_18px_-8px_rgba(224,176,46,0.5)] transition-all duration-300"
           >
             Start a Project With Me
           </a>
