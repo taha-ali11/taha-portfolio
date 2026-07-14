@@ -87,3 +87,13 @@ button:focus-visible,
 .skip-link:focus {
   left: 0;
 }
+
+/* Native cursor is only hidden once CustomCursor confirms a fine-pointer,
+   motion-friendly device — never breaks cursor on touch or reduced-motion */
+@media (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active a,
+  body.custom-cursor-active button {
+    cursor: none;
+  }
+}
