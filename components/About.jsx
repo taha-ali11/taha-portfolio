@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { GraduationCap, ShieldCheck } from "lucide-react";
 import { SkillIcon } from "@/lib/icons";
 import { aboutSkillIcons, stats } from "@/lib/data";
+// import Image from "next/image";
+// import Profile from "@/public/profile.png";
 
 const scrollTo = (id) => (e) => {
   e.preventDefault();
@@ -114,13 +116,14 @@ export default function About() {
             <div className="relative w-full aspect-[4/5] max-w-sm mx-auto">
               {/* Gradient ring — the visible "frame" edge */}
               <div className="absolute inset-0 rounded-blob bg-[linear-gradient(135deg,rgba(140,111,230,0.45),rgba(95,182,232,0.4)_35%,rgba(62,213,201,0.4)_65%,rgba(52,211,153,0.45))] shadow-clay-lg" />
-              {/*
-                Replace the placeholder below with:
-                <Image src="/profile.jpg" alt="Portrait of Taha Ali" fill
-                  className="object-cover rounded-blob" />
-              */}
+              
+                {/* <Image src={Profile} alt="Portrait of Taha Ali" fill
+                  className="object-cover rounded-blob" /> */}
+             
               <div className="absolute inset-[14px] sm:inset-4 rounded-blob overflow-hidden clay-pressed grid place-items-center bg-clay-lilac">
                 {/* Glossy inner highlight for extra puffed-dome feel */}
+                 {/* <Image src={Profile} alt="Portrait of Taha Ali" fill
+                  className="object-cover rounded-blob" /> */}
                 <div className="absolute -top-6 -left-6 w-2/3 h-2/3 rounded-full bg-white/50 blur-2xl pointer-events-none" />
               </div>
             </div>
