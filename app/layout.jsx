@@ -1,5 +1,4 @@
 import { Baloo_2, Plus_Jakarta_Sans } from "next/font/google";
-import CustomCursor from "@/components/CustomCursor";
 import "./globals.css";
 
 const baloo = Baloo_2({
@@ -107,7 +106,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <CustomCursor />
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

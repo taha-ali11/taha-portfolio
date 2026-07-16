@@ -18,6 +18,8 @@ import {
   SiN8N,
   SiPhp,
   SiBootstrap,
+  SiTypescript,
+  SiGreensock,
 } from "react-icons/si";
 import {
   Sparkles,
@@ -29,6 +31,8 @@ import {
   Wand2,
   FileCode2,
   Palette,
+  Orbit,
+  Cuboid,
 } from "lucide-react";
 
 export const iconMap = {
@@ -58,6 +62,10 @@ export const iconMap = {
   bootstrap: SiBootstrap,
   vanilla: FileCode2,
   uiux: Palette,
+  typescript: SiTypescript,
+  gsap: SiGreensock,
+  orbit: Orbit,
+  cuboid: Cuboid,
 };
 
 export function SkillIcon({ name, className }) {
