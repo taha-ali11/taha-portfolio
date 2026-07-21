@@ -73,6 +73,20 @@ export default function Connect() {
             If it involves a screen, a database, or an automation that's been stealing your weekends
             — I want to hear about it. Pick the channel that feels easiest and tell me what you're building.
           </p>
+          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-5 text-sm font-semibold text-ink/60">
+            <li className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-clayGreen" aria-hidden="true" />
+              Reply within 24 hours
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-clayGreen" aria-hidden="true" />
+              Free initial consultation
+            </li>
+            <li className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-clayGreen" aria-hidden="true" />
+              No sales pressure
+            </li>
+          </ul>
         </motion.div>
 
         <motion.ul

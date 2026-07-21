@@ -39,7 +39,7 @@ export default function ClayBlob({ className = "", colorClass = "bg-grape/20" })
     <div
       ref={blobRef}
       aria-hidden="true"
-      className={`absolute rounded-blob blur-2xl ${colorClass} ${className}`}
+      className={`absolute rounded-blob blur-xl ${colorClass} ${className}`}
     />
   );
 }

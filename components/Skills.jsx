@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SkillIcon } from "@/lib/icons";
-import { coreSkills, toolSkills } from "@/lib/data";
+import { skillCategories } from "@/lib/data";
 
 const chipShadow = {
   coral: "shadow-clay-coral",
@@ -44,7 +44,7 @@ function SkillTile({ skill, index }) {
       initial={{ opacity: 0, scale: 0.85, y: 14 }}
       whileInView={{ opacity: 1, scale: 1, y: 0 }}
       viewport={{ once: true, amount: 0.4 }}
-      transition={{ duration: 0.4, delay: index * 0.045 }}
+      transition={{ duration: 0.4, delay: index * 0.04 }}
       whileHover={{ y: -6, scale: 1.05, rotate: -1 }}
       className={isWide ? "col-span-2" : "col-span-1"}
     >
@@ -92,26 +92,19 @@ export default function Skills() {
           </h2>
         </motion.div>
 
-        <div className="mb-16">
-          <h3 className="font-display font-bold text-xl text-grape-dark mb-6 text-center">
-            Core Skills
-          </h3>
-          <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
-            {coreSkills.map((skill, i) => (
-              <SkillTile skill={skill} index={i} key={skill.name} />
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="font-display font-bold text-xl text-grape-dark mb-6 text-center">
-            Frameworks &amp; Libraries
-          </h3>
-          <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
-            {toolSkills.map((skill, i) => (
-              <SkillTile skill={skill} index={i} key={skill.name} />
-            ))}
-          </ul>
+        <div className="flex flex-col gap-14">
+          {skillCategories.map((category) => (
+            <div key={category.name}>
+              <h3 className="font-display font-bold text-xl text-grape-dark mb-6 text-center">
+                {category.name}
+              </h3>
+              <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
+                {category.skills.map((skill, i) => (
+                  <SkillTile skill={skill} index={i} key={skill.name} />
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

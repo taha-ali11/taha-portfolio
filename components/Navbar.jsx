@@ -109,6 +109,13 @@ export default function Navbar() {
           >
             <FaLinkedinIn size={16} />
           </a>
+          <a
+            href="#connect"
+            onClick={(e) => handleNavClick(e, "#connect")}
+            className="ml-1 px-4 py-2 rounded-full border-2 border-grape-dark/60 bg-grape text-white text-sm font-semibold shadow-[0_4px_0_0_#6C4FD6] hover:-translate-y-0.5 hover:shadow-[0_5px_0_0_#6C4FD6] active:translate-y-0.5 active:shadow-[0_2px_0_0_#6C4FD6] transition-all duration-200"
+          >
+            Let&apos;s Talk
+          </a>
         </div>
 
         <button
@@ -143,6 +150,13 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
+            <a
+              href="#connect"
+              onClick={(e) => handleNavClick(e, "#connect")}
+              className="mt-2 block text-center px-4 py-3 rounded-full border-2 border-grape-dark/60 bg-grape text-white text-sm font-semibold shadow-[0_4px_0_0_#6C4FD6]"
+            >
+              Let&apos;s Talk
+            </a>
             <div className="flex items-center gap-2 mt-3 px-4">
               <a
                 href={socials.instagram}

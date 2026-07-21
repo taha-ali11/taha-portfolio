@@ -1,8 +1,14 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { useRef, useState } from "react";
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
+import { ArrowUpRight, ChevronDown, CheckCircle2 } from "lucide-react";
 import { projects } from "@/lib/data";
 
 const accentShadow = {
@@ -28,6 +34,7 @@ const accentText = {
 
 function ProjectCard({ project, index }) {
   const cardRef = useRef(null);
+  const [expanded, setExpanded] = useState(false);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -52,10 +59,7 @@ function ProjectCard({ project, index }) {
   };
 
   const isLarge = project.size === "large";
-  const Wrapper = project.link ? "a" : "div";
-  const linkProps = project.link
-    ? { href: project.link, target: "_blank", rel: "noopener noreferrer" }
-    : {};
+  const detailId = `case-study-${project.id}`;
 
   return (
     <motion.div
@@ -66,16 +70,15 @@ function ProjectCard({ project, index }) {
       style={{ perspective: 1000 }}
       className={isLarge ? "md:col-span-2" : "md:col-span-1"}
     >
-      <Wrapper
-        {...linkProps}
+      <div
         ref={cardRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className={`group relative block h-full clay-surface p-6 sm:p-8 ${accentShadow[project.accent]} overflow-hidden focus-visible:outline focus-visible:outline-3 focus-visible:outline-grape-dark`}
+        className={`group relative h-full clay-surface p-6 sm:p-8 ${accentShadow[project.accent]} overflow-hidden`}
       >
         <motion.div
           style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-          className="h-full flex flex-col justify-between gap-6"
+          className="flex flex-col gap-6"
         >
           <div>
             <div className="flex items-start justify-between gap-3">
@@ -88,12 +91,16 @@ function ProjectCard({ project, index }) {
                 </p>
               </div>
               {project.link && (
-                <span
-                  className={`grid place-items-center w-10 h-10 rounded-full shrink-0 ${accentBg[project.accent]} ${accentText[project.accent]} group-hover:rotate-45 transition-transform duration-300`}
-                  aria-hidden="true"
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit the live ${project.name} site`}
+                  data-cursor-hover
+                  className={`grid place-items-center w-10 h-10 rounded-full shrink-0 ${accentBg[project.accent]} ${accentText[project.accent]} hover:rotate-45 transition-transform duration-300 focus-visible:outline focus-visible:outline-3 focus-visible:outline-grape-dark`}
                 >
                   <ArrowUpRight size={18} />
-                </span>
+                </a>
               )}
             </div>
             <p className="text-ink/70 mt-4 leading-relaxed">{project.purpose}</p>
@@ -109,8 +116,77 @@ function ProjectCard({ project, index }) {
               </li>
             ))}
           </ul>
+
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+            aria-controls={detailId}
+            className={`self-start flex items-center gap-1.5 text-sm font-semibold ${accentText[project.accent]} hover:opacity-75 transition-opacity focus-visible:outline focus-visible:outline-3 focus-visible:outline-grape-dark rounded-lg`}
+          >
+            {expanded ? "Hide case study" : "Read the case study"}
+            <ChevronDown
+              size={16}
+              className={`transition-transform duration-300 ${expanded ? "rotate-180" : ""}`}
+              aria-hidden="true"
+            />
+          </button>
+
+          <AnimatePresence initial={false}>
+            {expanded && (
+              <motion.div
+                id={detailId}
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.35, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <div className="flex flex-col gap-5 pt-2 border-t border-ink/10">
+                  <div className="pt-4">
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-ink/50 mb-1">
+                      Problem
+                    </h4>
+                    <p className="text-ink/70 text-sm leading-relaxed">{project.problem}</p>
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-ink/50 mb-1">
+                      Solution
+                    </h4>
+                    <p className="text-ink/70 text-sm leading-relaxed">{project.solution}</p>
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-ink/50 mb-1">
+                      Outcome
+                    </h4>
+                    <p className="text-ink/70 text-sm leading-relaxed">{project.outcome}</p>
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-ink/50 mb-2">
+                      Key Features
+                    </h4>
+                    <ul className="flex flex-col gap-1.5">
+                      {project.features.map((feature) => (
+                        <li
+                          key={feature}
+                          className="flex items-start gap-2 text-ink/70 text-sm leading-relaxed"
+                        >
+                          <CheckCircle2
+                            size={15}
+                            className={`shrink-0 mt-0.5 ${accentText[project.accent]}`}
+                            aria-hidden="true"
+                          />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
-      </Wrapper>
+      </div>
     </motion.div>
   );
 }
@@ -137,8 +213,9 @@ export default function Experience() {
             Real projects, real problems solved
           </h2>
           <p className="max-w-xl mx-auto text-ink/60 mt-3">
-            Four projects that shaped the last two years — hover a card to
-            feel it lift, tap through to see the live build.
+            Four projects that shaped the last year — open a case study for
+            the problem, the fix, and the result, or jump straight to the
+            live build.
           </p>
         </motion.div>
 
