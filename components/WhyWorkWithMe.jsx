@@ -67,7 +67,8 @@ export default function WhyWorkWithMe() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`clay-surface p-7 flex flex-col gap-3 ${chipShadow[reason.color]}`}
+              whileHover={{ y: -6, scale: 1.02, transition: { duration: 0.25 } }}
+              className={`clay-surface p-7 flex flex-col gap-3 transition-shadow duration-300 ${chipShadow[reason.color]}`}
             >
               <span
                 className={`grid place-items-center w-12 h-12 rounded-2xl shrink-0 ${chipBg[reason.color]} ${chipText[reason.color]}`}

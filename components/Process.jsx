@@ -76,7 +76,8 @@ export default function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`clay-surface p-6 flex flex-col gap-3 ${chipShadow[step.color]}`}
+              whileHover={{ y: -6, scale: 1.02, transition: { duration: 0.25 } }}
+              className={`clay-surface p-6 flex flex-col gap-3 transition-shadow duration-300 ${chipShadow[step.color]}`}
             >
               <div className="flex items-center gap-3">
                 <span

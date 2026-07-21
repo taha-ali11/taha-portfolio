@@ -6,6 +6,7 @@ import {
   FaReact,
   FaVuejs,
   FaDatabase,
+  FaPython,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -20,6 +21,8 @@ import {
   SiBootstrap,
   SiTypescript,
   SiGreensock,
+  SiFirebase,
+  SiSupabase,
 } from "react-icons/si";
 import {
   Sparkles,
@@ -66,6 +69,10 @@ export const iconMap = {
   gsap: SiGreensock,
   orbit: Orbit,
   cuboid: Cuboid,
+  firebase: SiFirebase,
+  firestore: SiFirebase,
+  supabase: SiSupabase,
+  python: FaPython,
 };
 
 export function SkillIcon({ name, className }) {
