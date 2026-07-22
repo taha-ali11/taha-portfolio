@@ -7,6 +7,7 @@ import {
   FaVuejs,
   FaDatabase,
   FaPython,
+  FaGithub,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -23,6 +24,19 @@ import {
   SiGreensock,
   SiFirebase,
   SiSupabase,
+  SiVercel,
+  SiGit,
+  SiPrisma,
+  SiEslint,
+  SiPrettier,
+  SiJest,
+  SiTestinglibrary,
+  SiPlaywright,
+  SiReactquery,
+  SiZod,
+  SiFramer,
+  SiShadcnui,
+  SiPostgresql,
 } from "react-icons/si";
 import {
   Sparkles,
@@ -36,6 +50,20 @@ import {
   Palette,
   Orbit,
   Cuboid,
+  Workflow,
+  Network,
+  KeyRound,
+  Lock,
+  ArrowLeftRight,
+  Server,
+  MonitorSmartphone,
+  Blocks,
+  Webhook,
+  ListChecks,
+  Boxes,
+  Link2,
+  Package,
+  FileJson,
 } from "lucide-react";
 
 export const iconMap = {
@@ -69,10 +97,48 @@ export const iconMap = {
   gsap: SiGreensock,
   orbit: Orbit,
   cuboid: Cuboid,
+  postgresql: SiPostgresql,
   firebase: SiFirebase,
   firestore: SiFirebase,
   supabase: SiSupabase,
   python: FaPython,
+
+  // Tooling & DevOps
+  vercel: SiVercel,
+  git: SiGit,
+  github: FaGithub,
+  cicd: Workflow,
+  eslint: SiEslint,
+  prettier: SiPrettier,
+  husky: Webhook,
+  lintstaged: ListChecks,
+
+  // Architecture & backend
+  prisma: SiPrisma,
+  apidesign: Network,
+  authentication: KeyRound,
+  authorization: Lock,
+  middleware: ArrowLeftRight,
+  serveractions: Server,
+
+  // Frontend engineering
+  responsive: MonitorSmartphone,
+  componentarch: Blocks,
+  shadcn: SiShadcnui,
+  json: FileJson,
+
+  // Testing & quality
+  jest: SiJest,
+  rtl: SiTestinglibrary,
+  playwright: SiPlaywright,
+
+  // State & data
+  tanstackquery: SiReactquery,
+  reactcontext: Boxes,
+  reacthooks: Link2,
+  zustand: Package,
+  zod: SiZod,
+  framer: SiFramer,
 };
 
 export function SkillIcon({ name, className }) {
