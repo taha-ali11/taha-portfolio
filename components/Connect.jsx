@@ -70,8 +70,7 @@ export default function Connect() {
             Your next project deserves more than a template. Ready?
           </h2>
           <p className="max-w-xl mx-auto text-ink/70 mt-4 leading-relaxed">
-            If it involves a screen, a database, or an automation that's been stealing your weekends
-            — I want to hear about it. Pick the channel that feels easiest and tell me what you're building.
+            Have an idea for a site, a messy workflow you want automated, or something in between that's hard to explain in one sentence? Send it my way anyway. Pick whichever channel feels easiest and just start talking — I'll take it from there.
           </p>
           <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-5 text-sm font-semibold text-ink/60">
             <li className="flex items-center gap-1.5">
