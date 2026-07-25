@@ -36,6 +36,7 @@ import {
   SiZod,
   SiFramer,
   SiShadcnui,
+  SiDocker,
   SiPostgresql,
 } from "react-icons/si";
 import {
@@ -109,6 +110,7 @@ export const iconMap = {
   github: FaGithub,
   cicd: Workflow,
   eslint: SiEslint,
+  docker: SiDocker,
   prettier: SiPrettier,
   husky: Webhook,
   lintstaged: ListChecks,
