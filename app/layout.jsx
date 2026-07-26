@@ -15,7 +15,7 @@ const jakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const siteUrl = "https://tahaali.dev"; // TODO: replace with your live domain
+const siteUrl = "https://tahabuilds.vercel.app"; // TODO: replace with your live domain
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -33,6 +33,11 @@ export const metadata = {
     "React developer portfolio",
     "AlphaGeeks",
   ],
+   icons: {
+    icon: "/favicon.ico",       // or "/icon.png" if you're using a PNG
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",   // optional, for iOS home screen
+  },
   authors: [{ name: "Taha Ali" }],
   creator: "Taha Ali",
   alternates: { canonical: siteUrl },
