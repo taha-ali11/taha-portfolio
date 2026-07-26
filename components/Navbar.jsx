@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Menu, X } from "lucide-react";
 import { navLinks, socials } from "@/lib/data";
+import Image from "next/image";
+import Logo from "@/app/logo.png";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
@@ -48,17 +50,25 @@ export default function Navbar() {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`w-full max-w-5xl flex items-center justify-between gap-4 px-4 sm:px-6 py-3 rounded-full bg-[#EFEAFA]/90 backdrop-blur-md transition-shadow duration-300 ${
-          scrolled ? "shadow-clay-md" : "shadow-clay-lg"
-        }`}
+        className={`w-full max-w-5xl flex items-center justify-between gap-4 px-4 sm:px-6 py-3 rounded-full bg-[#EFEAFA]/90 backdrop-blur-md transition-shadow duration-300 ${scrolled ? "shadow-clay-md" : "shadow-clay-lg"
+          }`}
         aria-label="Primary"
       >
+
         <a
           href="#home"
           onClick={(e) => handleNavClick(e, "#home")}
           className="font-display text-lg sm:text-xl font-bold text-grape-dark shrink-0"
         >
-          Taha Ali
+          {/* <Image
+            src={Logo}
+            alt="Taha Ali logo"
+            width={32}
+            height={32}
+            className="w-8 h-8 shrink-0 object-contain rounded-xl"
+            priority
+          /> */}
+          <span className="leading-none">Taha Ali</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-1 lg:gap-2">
@@ -70,11 +80,10 @@ export default function Navbar() {
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
                   aria-current={isActive ? "true" : undefined}
-                  className={`relative px-3 lg:px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
-                    isActive
-                      ? "text-white"
-                      : "text-ink/70 hover:text-grape-dark"
-                  }`}
+                  className={`relative px-3 lg:px-4 py-2 rounded-full text-sm font-semibold transition-colors ${isActive
+                    ? "text-white"
+                    : "text-ink/70 hover:text-grape-dark"
+                    }`}
                 >
                   {isActive && (
                     <motion.span
