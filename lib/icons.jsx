@@ -37,6 +37,8 @@ import {
   SiShadcnui,
   SiDocker,
   SiPostgresql,
+  SiFigma,
+  SiWordpress,
 } from "react-icons/si";
 import {
   Sparkles,
@@ -103,6 +105,9 @@ export const iconMap = {
   firestore: SiFirebase,
   supabase: SiSupabase,
   python: FaPython,
+  figma: SiFigma,
+  wordpress: SiWordpress,
+  restapi: Network,
 
   // Tooling & DevOps
   vercel: SiVercel,
@@ -132,8 +137,6 @@ export const iconMap = {
   // Testing & quality
   jest: SiJest,
   rtl: SiTestinglibrary,
-  // SiPlaywright isn't exported by the installed react-icons/simple-icons
-  // version — using a Lucide test-tube glyph in its place instead.
   playwright: TestTube2,
 
   // State & data

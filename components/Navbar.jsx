@@ -5,8 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Menu, X } from "lucide-react";
 import { navLinks, socials } from "@/lib/data";
-import Image from "next/image";
-import Logo from "@/app/logo.png";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
