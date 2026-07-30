@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://tahabuilds.vercel.app"; // TODO: replace with your live domain
+const siteUrl = "https://tahabuilds.vercel.app"; 
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -33,9 +33,9 @@ export const metadata = {
   description:
     "Taha Ali is a freelance full-stack developer in Lahore, Pakistan, building Next.js websites, animated interfaces, and AI automation for real businesses.",
   icons: {
-    icon: "/favicon.ico",       // or "/icon.png" if you're using a PNG
+    icon: "/favicon.ico",      
     shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",   // optional, for iOS home screen
+    apple: "/apple-icon.png",   
   },
   keywords: [
     "Taha Ali",
