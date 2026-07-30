@@ -5,7 +5,9 @@ import anime from "animejs";
 
 /**
  * Soft puffy blob shape used as ambient background decoration.
- * Animated with anime.js: morphs border-radius and drifts gently.
+ * Animated with anime.js: morphs border-radius, drifts, and gently
+ * squishes — echoing the same "clay breathing" the 3D pieces do in
+ * the Hero, so the flat and WebGL layers read as one material.
  * Skips animation entirely when the user prefers reduced motion.
  */
 export default function ClayBlob({ className = "", colorClass = "bg-grape/20" }) {
@@ -26,6 +28,7 @@ export default function ClayBlob({ className = "", colorClass = "bg-grape/20" })
         "42% 58% 65% 35% / 45% 40% 60% 55%",
       ],
       translateY: ["0px", "-22px", "10px", "0px"],
+      scale: [1, 1.06, 0.97, 1],
       rotate: ["0deg", "8deg", "-6deg", "0deg"],
       duration: 12000,
       easing: "easeInOutSine",

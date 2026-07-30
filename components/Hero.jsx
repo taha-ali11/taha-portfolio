@@ -1,9 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import TypingText from "./TypingText";
 import ClayBlob from "./ClayBlob";
 import { specializations } from "@/lib/data";
+
+// Loaded client-side only — it touches the DOM/WebGL directly and has nothing
+// useful to render on the server.
+const ThreeBackground = dynamic(() => import("./ThreeBackground"), {
+  ssr: false,
+});
 
 const scrollTo = (id) => (e) => {
   e.preventDefault();
@@ -17,6 +24,8 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden px-6 pt-32 pb-20"
       aria-label="Introduction"
     >
+      <ThreeBackground />
+
       <ClayBlob
         className="w-72 h-72 sm:w-96 sm:h-96 -top-10 -left-16 animate-float"
         colorClass="bg-grape/15"
@@ -34,7 +43,7 @@ export default function Hero() {
         colorClass="bg-clayGreen/15"
       />
 
-      <div className="relative max-w-3xl mx-auto text-center flex flex-col items-center gap-6">
+      <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center gap-6">
         <motion.span
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -81,20 +90,24 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.45 }}
           className="flex flex-wrap items-center justify-center gap-5 mt-2"
         >
-          <a
+          <motion.a
             href="#experience"
             onClick={scrollTo("#experience")}
-            className="px-7 py-3.5 rounded-full border-2 border-grape-dark/70 bg-grape text-white font-semibold shadow-[0_8px_0_0_#6C4FD6,0_18px_30px_-10px_rgba(108,79,214,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#6C4FD6,0_22px_34px_-10px_rgba(108,79,214,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#6C4FD6,0_10px_18px_-8px_rgba(108,79,214,0.5)] transition-all duration-300"
+            whileHover={{ y: -4 }}
+            whileTap={{ y: 2 }}
+            className="px-7 py-3.5 rounded-full border-2 border-grape-dark/70 bg-grape text-white font-semibold shadow-[0_8px_0_0_#6D3FE0,0_18px_30px_-10px_rgba(109,63,224,0.55)] transition-shadow duration-300"
           >
             View My Work
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#connect"
             onClick={scrollTo("#connect")}
-            className="px-7 py-3.5 rounded-full border-2 border-clayGreen-dark/70 bg-clayGreen text-white font-semibold shadow-[0_8px_0_0_#1FAE7E,0_18px_30px_-10px_rgba(31,174,126,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#1FAE7E,0_22px_34px_-10px_rgba(31,174,126,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#1FAE7E,0_10px_18px_-8px_rgba(31,174,126,0.5)] transition-all duration-300"
+            whileHover={{ y: -4 }}
+            whileTap={{ y: 2 }}
+            className="px-7 py-3.5 rounded-full border-2 border-clayGreen-dark/70 bg-clayGreen text-white font-semibold shadow-[0_8px_0_0_#259456,0_18px_30px_-10px_rgba(37,148,86,0.55)] transition-shadow duration-300"
           >
             Book a Discovery Call
-          </a>
+          </motion.a>
         </motion.div>
       </div>
     </section>

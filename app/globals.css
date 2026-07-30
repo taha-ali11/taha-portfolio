@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --font-baloo: "Baloo 2", sans-serif;
-  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-fredoka: "Fredoka", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
   scroll-behavior: smooth;
 }
 
@@ -13,19 +14,25 @@ html {
 }
 
 body {
-  background-color: #F4F1FC;
+  background-color: #f5f1fb;
   background-image:
-    radial-gradient(circle at 8% 15%, rgba(143, 111, 230, 0.07) 0%, transparent 40%),
-    radial-gradient(circle at 92% 30%, rgba(62, 213, 201, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 20% 85%, rgba(252, 211, 77, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 78% 92%, rgba(52, 211, 153, 0.07) 0%, transparent 40%);
-  color: #3A3450;
-  font-family: var(--font-jakarta);
+    /* subtle grain, sits on top and blends in — kills the "flat AI gradient" look */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E"),
+    radial-gradient(circle at 6% 12%, rgba(139, 92, 246, 0.14) 0%, transparent 42%),
+    radial-gradient(circle at 94% 22%, rgba(30, 158, 140, 0.12) 0%, transparent 42%),
+    radial-gradient(circle at 16% 88%, rgba(255, 193, 69, 0.14) 0%, transparent 42%),
+    radial-gradient(circle at 84% 94%, rgba(61, 182, 112, 0.12) 0%, transparent 42%),
+    radial-gradient(circle at 50% 50%, rgba(108, 140, 255, 0.08) 0%, transparent 60%);
+  background-blend-mode: soft-light, normal, normal, normal, normal, normal;
+  background-size: 140px 140px, auto, auto, auto, auto, auto;
+  color: #3b2e52;
+  font-family: var(--font-outfit);
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-baloo);
+  font-family: var(--font-fredoka);
   line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
 p {
@@ -36,34 +43,50 @@ p {
 a:focus-visible,
 button:focus-visible,
 [tabindex]:focus-visible {
-  outline: 3px solid #6C4FD6;
+  outline: 3px solid #6d3fe0;
   outline-offset: 3px;
   border-radius: 12px;
 }
 
 ::selection {
-  background: #B7A4F2;
-  color: #2a2540;
+  background: #d8c6ff;
+  color: #3b2e52;
 }
 
 /* Reusable claymorphic surface — outer floating shadow + inner dome highlight/shade */
 .clay-surface {
-  background: #EFEAFA;
+  background: #fbf7ff;
   border-radius: 2.75rem;
-  box-shadow: 18px 18px 40px #cdc2ec, -18px -18px 40px #ffffff,
-    inset 3px 3px 7px rgba(255, 255, 255, 0.8),
-    inset -7px -7px 17px rgba(205, 194, 236, 0.35);
+  box-shadow: 18px 18px 40px #d9cdef, -18px -18px 40px #ffffff,
+    inset 3px 3px 7px rgba(255, 255, 255, 0.85),
+    inset -7px -7px 17px rgba(217, 205, 239, 0.4);
 }
 
 .clay-pressed {
-  box-shadow: inset 7px 7px 13px #cdc2ec, inset -7px -7px 13px #ffffff;
+  box-shadow: inset 7px 7px 13px #d9cdef, inset -7px -7px 13px #ffffff;
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #8C6FE6, #3ED5C9);
+  background: linear-gradient(90deg, #8b5cf6, #1e9e8c);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* Custom scrollbar in-theme, since the default grey one clashes with clay */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f1fb;
+}
+::-webkit-scrollbar-thumb {
+  background: #d9cdef;
+  border-radius: 999px;
+  border: 3px solid #f5f1fb;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
 }
 
 /* Respect reduced motion preference across the whole site */
@@ -82,7 +105,7 @@ button:focus-visible,
   position: absolute;
   left: -9999px;
   top: 0;
-  background: #8C6FE6;
+  background: #8b5cf6;
   color: white;
   padding: 0.75rem 1.25rem;
   border-radius: 0 0 1rem 0;

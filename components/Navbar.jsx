@@ -50,7 +50,7 @@ export default function Navbar() {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`w-full max-w-5xl flex items-center justify-between gap-4 px-4 sm:px-6 py-3 rounded-full bg-[#EFEAFA]/90 backdrop-blur-md transition-shadow duration-300 ${scrolled ? "shadow-clay-md" : "shadow-clay-lg"
+        className={`w-full max-w-5xl flex items-center justify-between gap-4 px-4 sm:px-6 py-3 rounded-full bg-cloud/90 backdrop-blur-md transition-shadow duration-300 ${scrolled ? "shadow-clay-md" : "shadow-clay-lg"
           }`}
         aria-label="Primary"
       >
@@ -105,7 +105,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Taha Ali on Instagram"
-            className="grid place-items-center w-10 h-10 rounded-full bg-[#EFEAFA] shadow-clay-sm hover:shadow-clay-coral hover:text-coral transition-all"
+            className="grid place-items-center w-10 h-10 rounded-full bg-cloud shadow-clay-sm hover:shadow-clay-coral hover:text-coral transition-all"
           >
             <FaInstagram size={16} />
           </a>
@@ -114,14 +114,14 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Taha Ali on LinkedIn"
-            className="grid place-items-center w-10 h-10 rounded-full bg-[#EFEAFA] shadow-clay-sm hover:shadow-clay-sky hover:text-sky transition-all"
+            className="grid place-items-center w-10 h-10 rounded-full bg-cloud shadow-clay-sm hover:shadow-clay-sky hover:text-sky transition-all"
           >
             <FaLinkedinIn size={16} />
           </a>
           <a
             href="#connect"
             onClick={(e) => handleNavClick(e, "#connect")}
-            className="ml-1 px-4 py-2 rounded-full border-2 border-grape-dark/60 bg-grape text-white text-sm font-semibold shadow-[0_4px_0_0_#6C4FD6] hover:-translate-y-0.5 hover:shadow-[0_5px_0_0_#6C4FD6] active:translate-y-0.5 active:shadow-[0_2px_0_0_#6C4FD6] transition-all duration-200"
+            className="ml-1 px-4 py-2 rounded-full border-2 border-grape-dark/60 bg-grape text-white text-sm font-semibold shadow-[0_4px_0_0_#6D3FE0] hover:-translate-y-0.5 hover:shadow-[0_5px_0_0_#6D3FE0] active:translate-y-0.5 active:shadow-[0_2px_0_0_#6D3FE0] transition-all duration-200"
           >
             Let&apos;s Talk
           </a>
@@ -131,7 +131,7 @@ export default function Navbar() {
           onClick={() => setIsOpen((v) => !v)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
-          className="md:hidden grid place-items-center w-10 h-10 rounded-full bg-[#EFEAFA] shadow-clay-sm shrink-0"
+          className="md:hidden grid place-items-center w-10 h-10 rounded-full bg-cloud shadow-clay-sm shrink-0"
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -144,7 +144,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="absolute top-20 w-[calc(100%-2rem)] max-w-sm mx-4 rounded-clay bg-[#EFEAFA] shadow-clay-lg p-4 md:hidden"
+            className="absolute top-20 w-[calc(100%-2rem)] max-w-sm mx-4 rounded-clay bg-cloud shadow-clay-lg p-4 md:hidden"
           >
             <ul className="flex flex-col gap-1">
               {navLinks.map((link) => (
@@ -162,7 +162,7 @@ export default function Navbar() {
             <a
               href="#connect"
               onClick={(e) => handleNavClick(e, "#connect")}
-              className="mt-2 block text-center px-4 py-3 rounded-full border-2 border-grape-dark/60 bg-grape text-white text-sm font-semibold shadow-[0_4px_0_0_#6C4FD6]"
+              className="mt-2 block text-center px-4 py-3 rounded-full border-2 border-grape-dark/60 bg-grape text-white text-sm font-semibold shadow-[0_4px_0_0_#6D3FE0]"
             >
               Let&apos;s Talk
             </a>

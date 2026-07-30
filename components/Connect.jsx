@@ -97,17 +97,18 @@ export default function Connect() {
         >
           {contactChannels.map((channel) => (
             <li key={channel.label}>
-              <a
+              <motion.a
                 href={channel.href}
                 target={channel.href.startsWith("http") ? "_blank" : undefined}
                 rel={channel.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className={`group flex flex-col items-center gap-3 clay-surface py-7 px-4 hover:-translate-y-1.5 transition-all duration-300 ${colorClasses[channel.color]}`}
+                whileHover={{ y: -6, rotate: -1 }}
+                className={`group flex flex-col items-center gap-3 clay-surface py-7 px-4 transition-shadow duration-300 ${colorClasses[channel.color]}`}
               >
                 <channel.icon size={26} aria-hidden="true" />
                 <span className="text-sm font-semibold text-ink/80">
                   {channel.label}
                 </span>
-              </a>
+              </motion.a>
             </li>
           ))}
         </motion.ul>
@@ -150,15 +151,17 @@ export default function Connect() {
               </a>
             </div>
           </div>
-          <a
+          <motion.a
             href={agencySocials.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 sm:mt-0 shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-full border-2 border-sky-dark/70 bg-sky text-white font-semibold shadow-[0_8px_0_0_#3D93C6,0_18px_30px_-10px_rgba(61,147,198,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#3D93C6,0_22px_34px_-10px_rgba(61,147,198,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#3D93C6,0_10px_18px_-8px_rgba(61,147,198,0.5)] transition-all duration-300"
+            whileHover={{ y: -4 }}
+            whileTap={{ y: 2 }}
+            className="mt-6 sm:mt-0 shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-full border-2 border-sky-dark/70 bg-sky text-white font-semibold shadow-[0_8px_0_0_#4A63E0,0_18px_30px_-10px_rgba(74,99,224,0.55)] transition-shadow duration-300"
           >
             Visit AlphaGeeks
             <ArrowUpRight size={18} />
-          </a>
+          </motion.a>
         </motion.div>
       </div>
     </section>

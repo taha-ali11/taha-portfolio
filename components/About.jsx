@@ -115,7 +115,7 @@ export default function About() {
           >
             <div className="relative w-full aspect-[4/5] max-w-md mx-auto">
               {/* Gradient ring — the visible "frame" edge */}
-              <div className="absolute inset-0 rounded-blob bg-[linear-gradient(135deg,rgba(140,111,230,0.45),rgba(95,182,232,0.4)_35%,rgba(62,213,201,0.4)_65%,rgba(52,211,153,0.45))] shadow-clay-lg" />
+              <div className="absolute inset-0 rounded-blob bg-[linear-gradient(135deg,rgba(139,92,246,0.45),rgba(108,140,255,0.4)_35%,rgba(30,158,140,0.4)_65%,rgba(61,182,112,0.45))] shadow-clay-lg" />
               <div className="absolute inset-[14px] sm:inset-4 rounded-blob overflow-hidden clay-pressed grid place-items-center bg-clay-lilac">
                 <Image
                   src={Profile}
@@ -132,7 +132,7 @@ export default function About() {
           </motion.div>
         </div>
 
-        {/* Stats row spanning both columns */}
+        {/* Stats row spanning both columns — monospace figures as a small "developer" signature */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -141,28 +141,31 @@ export default function About() {
           className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-8"
         >
           {stats.map((stat) => (
-            <div
+            <motion.div
               key={stat.label}
-              className="clay-surface py-6 px-3 sm:px-6 text-center shadow-clay-sm"
+              whileHover={{ y: -4 }}
+              className="clay-surface py-6 px-3 sm:px-6 text-center shadow-clay-sm transition-shadow duration-300"
             >
-              <p className="font-display text-2xl sm:text-4xl font-extrabold text-gradient">
+              <p className="font-mono text-2xl sm:text-4xl font-bold text-gradient">
                 {stat.value}
               </p>
               <p className="text-xs sm:text-sm font-semibold text-ink/60 mt-1">
                 {stat.label}
               </p>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
 
         <div className="flex justify-center mt-10">
-          <a
+          <motion.a
             href="#connect"
             onClick={scrollTo("#connect")}
-            className="px-7 py-3.5 rounded-full border-2 border-sunny-dark/70 bg-sunny text-ink font-bold shadow-[0_8px_0_0_#E0B02E,0_18px_30px_-10px_rgba(224,176,46,0.55)] hover:-translate-y-1 hover:shadow-[0_10px_0_0_#E0B02E,0_22px_34px_-10px_rgba(224,176,46,0.6)] active:translate-y-1 active:shadow-[0_4px_0_0_#E0B02E,0_10px_18px_-8px_rgba(224,176,46,0.5)] transition-all duration-300"
+            whileHover={{ y: -4 }}
+            whileTap={{ y: 2 }}
+            className="px-7 py-3.5 rounded-full border-2 border-sunny-dark/70 bg-sunny text-ink font-bold shadow-[0_8px_0_0_#E0A324,0_18px_30px_-10px_rgba(224,163,36,0.55)] transition-shadow duration-300"
           >
             Got a Vision? I&apos;ve Got the Stack
-          </a>
+          </motion.a>
         </div>
       </div>
     </section>
