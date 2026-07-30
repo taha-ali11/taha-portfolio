@@ -31,7 +31,6 @@ import {
   SiPrettier,
   SiJest,
   SiTestinglibrary,
-  SiPlaywright,
   SiReactquery,
   SiZod,
   SiFramer,
@@ -65,6 +64,7 @@ import {
   Link2,
   Package,
   FileJson,
+  TestTube2,
 } from "lucide-react";
 
 export const iconMap = {
@@ -132,7 +132,9 @@ export const iconMap = {
   // Testing & quality
   jest: SiJest,
   rtl: SiTestinglibrary,
-  playwright: SiPlaywright,
+  // SiPlaywright isn't exported by the installed react-icons/simple-icons
+  // version — using a Lucide test-tube glyph in its place instead.
+  playwright: TestTube2,
 
   // State & data
   tanstackquery: SiReactquery,

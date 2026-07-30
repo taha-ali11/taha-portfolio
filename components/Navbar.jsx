@@ -121,7 +121,7 @@ export default function Navbar() {
           <a
             href="#connect"
             onClick={(e) => handleNavClick(e, "#connect")}
-            className="ml-1 px-4 py-2 rounded-full border-2 border-grape-dark/60 bg-grape text-white text-sm font-semibold shadow-[0_4px_0_0_#6D3FE0] hover:-translate-y-0.5 hover:shadow-[0_5px_0_0_#6D3FE0] active:translate-y-0.5 active:shadow-[0_2px_0_0_#6D3FE0] transition-all duration-200"
+            className="ml-1 px-4 py-2 rounded-full border-2 border-grape-dark/60 bg-grape text-white text-sm font-semibold shadow-[0_4px_0_0_#7C3AED] hover:-translate-y-0.5 hover:shadow-[0_5px_0_0_#7C3AED] active:translate-y-0.5 active:shadow-[0_2px_0_0_#7C3AED] transition-all duration-200"
           >
             Let&apos;s Talk
           </a>
@@ -162,7 +162,7 @@ export default function Navbar() {
             <a
               href="#connect"
               onClick={(e) => handleNavClick(e, "#connect")}
-              className="mt-2 block text-center px-4 py-3 rounded-full border-2 border-grape-dark/60 bg-grape text-white text-sm font-semibold shadow-[0_4px_0_0_#6D3FE0]"
+              className="mt-2 block text-center px-4 py-3 rounded-full border-2 border-grape-dark/60 bg-grape text-white text-sm font-semibold shadow-[0_4px_0_0_#7C3AED]"
             >
               Let&apos;s Talk
             </a>

@@ -14,15 +14,15 @@ html {
 }
 
 body {
-  background-color: #f5f1fb;
+  background-color: #f5f3ff;
   background-image:
     /* subtle grain, sits on top and blends in — kills the "flat AI gradient" look */
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E"),
-    radial-gradient(circle at 6% 12%, rgba(139, 92, 246, 0.14) 0%, transparent 42%),
+    radial-gradient(circle at 6% 12%, rgba(124, 58, 237, 0.15) 0%, transparent 42%),
     radial-gradient(circle at 94% 22%, rgba(30, 158, 140, 0.12) 0%, transparent 42%),
-    radial-gradient(circle at 16% 88%, rgba(255, 193, 69, 0.14) 0%, transparent 42%),
-    radial-gradient(circle at 84% 94%, rgba(61, 182, 112, 0.12) 0%, transparent 42%),
-    radial-gradient(circle at 50% 50%, rgba(108, 140, 255, 0.08) 0%, transparent 60%);
+    radial-gradient(circle at 16% 88%, rgba(217, 119, 6, 0.14) 0%, transparent 42%),
+    radial-gradient(circle at 84% 94%, rgba(5, 150, 105, 0.13) 0%, transparent 42%),
+    radial-gradient(circle at 50% 50%, rgba(234, 88, 12, 0.07) 0%, transparent 60%);
   background-blend-mode: soft-light, normal, normal, normal, normal, normal;
   background-size: 140px 140px, auto, auto, auto, auto, auto;
   color: #3b2e52;
@@ -43,7 +43,7 @@ p {
 a:focus-visible,
 button:focus-visible,
 [tabindex]:focus-visible {
-  outline: 3px solid #6d3fe0;
+  outline: 3px solid #7c3aed;
   outline-offset: 3px;
   border-radius: 12px;
 }
@@ -67,7 +67,7 @@ button:focus-visible,
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #8b5cf6, #1e9e8c);
+  background: linear-gradient(90deg, #7c3aed, #1e9e8c);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -86,7 +86,7 @@ button:focus-visible,
   border: 3px solid #f5f1fb;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #8b5cf6;
+  background: #7c3aed;
 }
 
 /* Respect reduced motion preference across the whole site */
@@ -105,7 +105,7 @@ button:focus-visible,
   position: absolute;
   left: -9999px;
   top: 0;
-  background: #8b5cf6;
+  background: #7c3aed;
   color: white;
   padding: 0.75rem 1.25rem;
   border-radius: 0 0 1rem 0;

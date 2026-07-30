@@ -95,7 +95,7 @@ export default function Hero() {
             onClick={scrollTo("#experience")}
             whileHover={{ y: -4 }}
             whileTap={{ y: 2 }}
-            className="px-7 py-3.5 rounded-full border-2 border-grape-dark/70 bg-grape text-white font-semibold shadow-[0_8px_0_0_#6D3FE0,0_18px_30px_-10px_rgba(109,63,224,0.55)] transition-shadow duration-300"
+            className="px-7 py-3.5 rounded-full border-2 border-grape-dark/70 bg-grape text-white font-semibold shadow-[0_8px_0_0_#7C3AED,0_18px_30px_-10px_rgba(124,58,237,0.55)] transition-shadow duration-300"
           >
             View My Work
           </motion.a>
@@ -104,7 +104,7 @@ export default function Hero() {
             onClick={scrollTo("#connect")}
             whileHover={{ y: -4 }}
             whileTap={{ y: 2 }}
-            className="px-7 py-3.5 rounded-full border-2 border-clayGreen-dark/70 bg-clayGreen text-white font-semibold shadow-[0_8px_0_0_#259456,0_18px_30px_-10px_rgba(37,148,86,0.55)] transition-shadow duration-300"
+            className="px-7 py-3.5 rounded-full border-2 border-clayGreen-dark/70 bg-clayGreen text-white font-semibold shadow-[0_8px_0_0_#059669,0_18px_30px_-10px_rgba(5,150,105,0.55)] transition-shadow duration-300"
           >
             Book a Discovery Call
           </motion.a>

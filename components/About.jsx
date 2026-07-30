@@ -162,7 +162,7 @@ export default function About() {
             onClick={scrollTo("#connect")}
             whileHover={{ y: -4 }}
             whileTap={{ y: 2 }}
-            className="px-7 py-3.5 rounded-full border-2 border-sunny-dark/70 bg-sunny text-ink font-bold shadow-[0_8px_0_0_#E0A324,0_18px_30px_-10px_rgba(224,163,36,0.55)] transition-shadow duration-300"
+            className="px-7 py-3.5 rounded-full border-2 border-sunny-dark/70 bg-sunny text-ink font-bold shadow-[0_8px_0_0_#D97706,0_18px_30px_-10px_rgba(217,119,6,0.55)] transition-shadow duration-300"
           >
             Got a Vision? I&apos;ve Got the Stack
           </motion.a>
