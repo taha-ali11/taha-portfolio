@@ -32,22 +32,17 @@ export const metadata = {
   },
   description:
     "Taha Ali is a freelance full-stack developer in Lahore, Pakistan, building Next.js websites, animated interfaces, and AI automation for real businesses.",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",
-  },
-  keywords: [
-    "Taha Ali",
-    "Next.js developer Lahore",
-    "freelance web developer Pakistan",
-    "AI automation developer",
-    "React developer portfolio",
-    "AlphaGeeks",
-  ],
-
-  authors: [{ name: "Taha Ali" }],
-  creator: "Taha Ali",
+    keywords: [
+      "Taha Ali",
+      "Next.js developer Lahore",
+      "freelance web developer Pakistan",
+      "AI automation developer",
+      "React developer portfolio",
+      "AlphaGeeks",
+    ],
+    
+    authors: [{ name: "Taha Ali" }],
+    creator: "Taha Ali",
   alternates: { canonical: siteUrl },
   openGraph: {
     type: "website",
@@ -69,13 +64,19 @@ export const metadata = {
     card: "summary_large_image",
     title: "Taha Ali — Full-Stack Developer & AI Automation Specialist",
     description:
-      "Freelance full-stack developer in Lahore, Pakistan, building Next.js websites, animated interfaces, and AI automation for real businesses.",
+    "Freelance full-stack developer in Lahore, Pakistan, building Next.js websites, animated interfaces, and AI automation for real businesses.",
     images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
     follow: true,
     googleBot: { index: true, follow: true },
+  },
+  
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
 };
 
