@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://tahabuilds.vercel.app"; 
+const siteUrl = "https://tahabuilds.vercel.app";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -33,9 +33,9 @@ export const metadata = {
   description:
     "Taha Ali is a freelance full-stack developer in Lahore, Pakistan, building Next.js websites, animated interfaces, and AI automation for real businesses.",
   icons: {
-    icon: "/favicon.ico",      
+    icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",   
+    apple: "/apple-icon.png",
   },
   keywords: [
     "Taha Ali",
@@ -64,9 +64,6 @@ export const metadata = {
         alt: "Taha Ali — Full-Stack Developer",
       },
     ],
-  },
-  openGraph: {
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Taha Ali — Full-Stack Developer" }],
   },
   twitter: {
     card: "summary_large_image",
