@@ -37,7 +37,7 @@ export const metadata = {
     shortcut: "/favicon.ico",
     apple: "/apple-icon.png",   // optional, for iOS home screen
   },
-    keywords: [
+  keywords: [
     "Taha Ali",
     "Next.js developer Lahore",
     "freelance web developer Pakistan",
@@ -45,7 +45,7 @@ export const metadata = {
     "React developer portfolio",
     "AlphaGeeks",
   ],
-   
+
   authors: [{ name: "Taha Ali" }],
   creator: "Taha Ali",
   alternates: { canonical: siteUrl },
@@ -58,12 +58,15 @@ export const metadata = {
     siteName: "Taha Ali",
     images: [
       {
-        url: "/public/profile.png", // TODO: add a 1200x630 social preview image
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Taha Ali — Full-Stack Developer",
       },
     ],
+  },
+  openGraph: {
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Taha Ali — Full-Stack Developer" }],
   },
   twitter: {
     card: "summary_large_image",
