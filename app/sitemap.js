@@ -1,6 +1,5 @@
 export default function sitemap() {
-  const siteUrl = "https://tahabuilds.vercel.app"; // TODO: replace with your live domain
-
+  const siteUrl = "https://tahabuilds.vercel.app"; 
   return [
     {
       url: siteUrl,
