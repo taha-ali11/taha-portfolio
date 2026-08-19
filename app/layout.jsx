@@ -1,5 +1,6 @@
 import { Fredoka, Outfit, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { socials } from "@/lib/data";
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -27,44 +28,48 @@ const siteUrl = "https://tahabuilds.vercel.app";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Taha Ali — Full-Stack Developer & AI Automation Specialist",
+    default: "Taha Ali — Full-Stack Web Developer & AI Engineer",
     template: "%s | Taha Ali",
   },
   description:
-    "Taha Ali is a freelance full-stack developer in Lahore, Pakistan, building Next.js websites, animated interfaces, and AI automation for real businesses.",
-    keywords: [
-      "Taha Ali",
-      "Next.js developer Lahore",
-      "freelance web developer Pakistan",
-      "AI automation developer",
-      "React developer portfolio",
-      "AlphaGeeks",
-    ],
-    
-    authors: [{ name: "Taha Ali" }],
-    creator: "Taha Ali",
+    "Taha Ali is a full-stack web developer and AI engineer in Lahore, Pakistan, building Next.js applications, AI-integrated platforms, and automation pipelines for real businesses.",
+  keywords: [
+    "Taha Ali",
+    "Full-Stack Web Developer",
+    "AI Engineer",
+    "Next.js developer Lahore",
+    "React developer Pakistan",
+    "AI automation developer",
+    "LLM integration developer",
+    "AI engineer portfolio",
+    "freelance web developer Pakistan",
+    "AlphaGeeks",
+  ],
+
+  authors: [{ name: "Taha Ali" }],
+  creator: "Taha Ali",
   alternates: { canonical: siteUrl },
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Taha Ali — Full-Stack Developer & AI Automation Specialist",
+    title: "Taha Ali — Full-Stack Web Developer & AI Engineer",
     description:
-      "Freelance full-stack developer in Lahore, Pakistan, building Next.js websites, animated interfaces, and AI automation for real businesses.",
+      "Full-stack web developer and AI engineer building Next.js applications, animated interfaces, and AI-powered automation for real businesses.",
     siteName: "Taha Ali",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Taha Ali — Full-Stack Developer",
+        alt: "Taha Ali — Full-Stack Web Developer & AI Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Taha Ali — Full-Stack Developer & AI Automation Specialist",
+    title: "Taha Ali — Full-Stack Web Developer & AI Engineer",
     description:
-    "Freelance full-stack developer in Lahore, Pakistan, building Next.js websites, animated interfaces, and AI automation for real businesses.",
+      "Full-stack web developer and AI engineer building Next.js applications, animated interfaces, and AI-powered automation for real businesses.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -72,7 +77,7 @@ export const metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
-  
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -84,7 +89,7 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Taha Ali",
-  jobTitle: "Full-Stack Developer & AI Automation Specialist",
+  jobTitle: "Full-Stack Web Developer & AI Engineer",
   url: siteUrl,
   address: {
     "@type": "PostalAddress",
@@ -106,8 +111,12 @@ const personJsonLd = {
     "Node.js",
     "AI Automation",
     "AI Agents",
+    "OpenAI API Integration",
+    "Retrieval-Augmented Generation",
+    "n8n Workflow Automation",
     "UI/UX Animation",
   ],
+  sameAs: [socials.linkedin, socials.github, socials.instagram],
 };
 
 export default function RootLayout({ children }) {
