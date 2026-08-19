@@ -25,7 +25,7 @@ const blocks = [
     title: "What I Do",
     color: "text-grape-dark",
     bg: "bg-grape/20",
-    body: "I build full-stack Next.js sites, wire animation in with Framer Motion and Anime.js, and increasingly build AI automation that plugs directly into a client's workflow — not a chatbot bolted onto a homepage.",
+    body: "I build full-stack Next.js sites, wire animation in with Framer Motion and Anime.js, and architect high-density AI integrations and self-hosted automation pipelines that plug directly into core business operations — not a generic chatbot bolted onto a homepage.",
   },
   {
     icon: ShieldCheck,
