@@ -18,7 +18,7 @@ const blocks = [
     title: "Who I Am",
     color: "text-teal-dark",
     bg: "bg-teal/20",
-    body: "A freelance full-stack developer based in Lahore, Pakistan. ADP in Computer Science from the University of Central Punjab. I founded AlphaGeeks, my agency, and split my time between running it and independent client work.",
+    body: "Full-Stack Developer and Founder based in Lahore, Pakistan, with an ADP in Computer Science from UCP and currently pursuing a BS in Information Technology at UE Lahore. Founder of AlphaGeeks, specializing in building scalable digital solutions while working with clients independently.",
   },
   {
     icon: Sparkles,
